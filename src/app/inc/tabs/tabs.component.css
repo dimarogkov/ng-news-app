@@ -1,0 +1,45 @@
+/*==============*/
+/* TABS */
+/*==============*/
+.tabs {
+	position: fixed;
+	z-index: 1;
+	left: 50%;
+	bottom: 0;
+	display: block;
+	width: 100%;
+	max-width: 575px;
+	background-color: var(--color-white);
+	transform: translateX(-50%);
+}
+.tabs__list {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	width: 100%;
+	height: var(--tabs-height);
+	border-top: 2px solid var(--color-grey);
+}
+.tabs__tab {
+	position: relative;
+	display: flex;
+}
+.material-icons {
+	position: relative;
+	cursor: pointer;
+	display: inline-block;
+	color: var(--color-black);
+	font-size: 24px;
+	transition: all 0.3s;
+}
+.tabs__tab.active .material-icons {
+	color: var(--color-blue);
+}
+.tab__margin {
+	height: var(--tabs-height);
+}
+/* media */
+@media(min-width: 1200px){
+	.material-icons:hover {color: var(--color-blue);}
+}

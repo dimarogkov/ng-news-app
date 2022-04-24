@@ -1,0 +1,79 @@
+@import '~swiper/scss';
+
+.swiper__section {
+    position: relative;
+    display: block;
+    width: calc(100% + 50px);
+    overflow: hidden;
+    padding-left: 25px;
+    margin-left: -25px;
+    .swiper__section_title {
+        margin-bottom: 10px;
+    }
+}
+
+.swiper__block {
+    position: relative;
+    display: block;
+    width: 65%;
+    overflow: visible;
+    margin-left: 0;
+    .swiper__item {
+        position: relative;
+        display: block;
+        width: 100%;
+        .swiper__item_imgs {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 0;
+            padding-bottom: 45%;
+            background-color: var(--color-black);
+            overflow: hidden;
+            border-radius: 20px;
+            margin-bottom: 12px;
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                transition: all 0.3s;
+            }
+        }
+        .swiper__item_cont {
+            position: relative;
+            width: 100%;
+            .media {
+                cursor: pointer;
+                transition: all 0.3s;
+            }
+            .swiper__item_info {
+                position: relative;
+                display: block;
+                width: 100%;
+                margin-top: 8px;
+                span {
+                    position: relative;
+                    display: block;
+                    width: 100%;
+                    font-size: 13px;
+                    line-height: 1.2em;
+                    color: var(--color-grey-text);
+                    margin-bottom: 5px;
+                }
+                span:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+/* media */
+@media(min-width: 1200px){
+    .swiper__item_imgs:hover img {transform: scale(1.05);}
+	.swiper__item_cont .media:hover {color: var(--color-blue);}
+}

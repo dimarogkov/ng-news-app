@@ -1,1 +1,14 @@
-<p>tabs works!</p>
+<nav class="tabs">
+    <ul class="tabs__list">
+        <li class="tabs__tab" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            <span class="material-icons">home</span>
+        </li>
+        <li class="tabs__tab" routerLink="/search" routerLinkActive="active">
+            <span class="material-icons">search</span>
+        </li>
+        <li class="tabs__tab" routerLink="/user" routerLinkActive="active">
+            <span class="material-icons">person_outline</span>
+        </li>
+    </ul>
+</nav>
+<div class="tab__margin"></div>
