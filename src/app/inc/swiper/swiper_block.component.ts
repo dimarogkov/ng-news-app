@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import SwiperCore, { SwiperOptions } from 'swiper';
+import { Component, Input, OnInit } from '@angular/core';
+import { News } from 'src/app/interfaces/news.interface';
+import { SwiperOptions } from 'swiper';
 
 @Component({
   selector: 'app-swiper-block',
@@ -8,6 +9,8 @@ import SwiperCore, { SwiperOptions } from 'swiper';
 })
 
 export class SwiperBlockComponent implements OnInit {
+
+  @Input() items: any
 
   swiperConfig: SwiperOptions = {
     slidesPerView: 1,

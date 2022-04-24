@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { News } from 'src/app/interfaces/news.interface';
+import { NewsService } from 'src/app/services/news.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  newsArr: News[] = [];
+  news: News[] = [];
 
-  ngOnInit(): void {
+  constructor(private newsServices: NewsService) {
+    this.newsServices.getNews().subscribe(item => {
+      item.articles.forEach((el: any) => this.newsArr.push(el));
+      this.news.push(item.articles[0]);
+    });
   }
+
+  ngOnInit(): void {}
 
 }

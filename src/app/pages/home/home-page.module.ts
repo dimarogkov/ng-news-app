@@ -4,6 +4,7 @@ import { SharedModule } from 'src/app/shared/shared/shared.module';
 import { HomeComponent } from './home.component';
 import { RouterModule, Routes } from '@angular/router';
 import { SwiperBlockComponent } from 'src/app/inc/swiper/swiper_block.component';
+import { BannerComponent } from 'src/app/inc/banner/banner.component';
 
 const pageRoutes: Routes = [
   {path: '', component: HomeComponent}
@@ -12,6 +13,7 @@ const pageRoutes: Routes = [
 @NgModule({
   declarations: [
     HomeComponent,
+    BannerComponent,
     SwiperBlockComponent
   ],
   imports: [

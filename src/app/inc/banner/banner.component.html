@@ -1,0 +1,10 @@
+<section class="banner" *ngFor="let el of item">
+    <div class="banner__imgs">
+        <img [src]="el.urlToImage" alt>
+    </div>
+    <div class="banner__cont">
+        <div class="label">{{el.auther}}</div>
+        <h1 class="h1 bold color-white text-line-3">{{el.title}}</h1>
+        <a href="#" class="btn-link">Learn More <span class="material-icons">east</span></a>
+    </div>
+</section>

@@ -7,7 +7,6 @@ import { SharedModule } from './shared/shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './inc/header/header.component';
 import { TabsComponent } from './inc/tabs/tabs.component';
-import { SwiperModule } from 'swiper/angular';
 
 @NgModule({
   declarations: [
