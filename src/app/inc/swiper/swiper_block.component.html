@@ -4,11 +4,11 @@
     <swiper [config]="swiperConfig" class="swiper__block">
         <ng-template swiperSlide *ngFor="let item of items">
             <div class="swiper__item">
-                <a href="#" class="swiper__item_imgs">
+                <a routerLink="/news-detail" class="swiper__item_imgs" (click)="getNewsDetail(item)">
                     <img [src]='item.urlToImage' alt>
                 </a>
                 <div class="swiper__item_cont">
-                    <a href="#" class="h4 media text-line-2">{{item.title}}</a>
+                    <a routerLink="/news-detail" class="h4 media text-line-2" (click)="getNewsDetail(item)">{{item.title}}</a>
                     <div class="swiper__item_info">
                         <span class="time text-line-1">{{item.publishedAt}}</span>
                         <span class="author text-line-1">{{item.author}}</span>

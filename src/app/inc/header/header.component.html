@@ -1,1 +1,12 @@
-<!-- <p>header works!</p> -->
+<header class="header" *ngIf="showHeader, else arrow__back">
+    <span class="material-icons">menu</span>
+    <div class="header__user">
+        <img src="#" alt>
+    </div>
+</header>
+
+<ng-template #arrow__back>
+    <div class="header">
+        <a routerLink="/"><span class="material-icons">west</span></a>
+    </div>
+</ng-template>

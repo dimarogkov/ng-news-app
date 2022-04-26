@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   news: News[] = [];
 
   constructor(private newsServices: NewsService) {
-    this.newsServices.getNews().subscribe(item => {
+    this.newsServices.getAllNews('everything?q=tesla&from=2022-03-26&sortBy=publishedAt').subscribe(item => {
       item.articles.forEach((el: any) => this.newsArr.push(el));
       this.news.push(item.articles[0]);
     });

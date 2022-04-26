@@ -1,21 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SharedModule } from 'src/app/shared/shared/shared.module';
-import { HomeComponent } from './home.component';
 import { RouterModule, Routes } from '@angular/router';
-import { BannerComponent } from 'src/app/inc/banner/banner.component';
-import { SwiperBlockComponent } from 'src/app/inc/swiper/swiper_block.component';
+import { NewsDetailComponent } from './news-detail.component';
 
 const pageRoutes: Routes = [
-  {path: '', component: HomeComponent}
+  {path: '', component: NewsDetailComponent}
 ]
 
 @NgModule({
-  declarations: [
-    HomeComponent,
-    BannerComponent,
-    SwiperBlockComponent
-  ],
+  declarations: [],
   imports: [
     CommonModule,
     SharedModule,
@@ -26,4 +20,4 @@ const pageRoutes: Routes = [
   ]
 })
 
-export class HomeModule {}
+export class NewsDetailModule { }

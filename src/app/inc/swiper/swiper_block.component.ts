@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { News } from 'src/app/interfaces/news.interface';
+import { NewsService } from 'src/app/services/news.service';
 import { SwiperOptions } from 'swiper';
 
 @Component({
@@ -17,8 +17,12 @@ export class SwiperBlockComponent implements OnInit {
     spaceBetween: 25,
   }
 
-  constructor() {}
+  constructor(private newsServices: NewsService) {}
 
   ngOnInit(): void {}
+
+  getNewsDetail(el: any) {
+    this.newsServices.newsDetail = el;
+  }
 
 }

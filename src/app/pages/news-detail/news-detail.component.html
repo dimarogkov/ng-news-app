@@ -1,0 +1,27 @@
+<section class="news__detail_sec">
+
+    <div class="news__detail_imgs">
+        <img [src]="thisNews.urlToImage" alt>
+    </div>
+
+   <div class="news__detail_cont">
+       <div class="news__detail_head">
+           <div class="news__detail_logo">
+               <img [src]="thisNews.urlToImage" alt>
+           </div>
+           <div class="news__detail_info">
+               <p class="text-line-1">{{thisNews.author}}</p>
+               <p class="text-line-1">{{thisNews.publishedAt}}</p>
+           </div>
+       </div>
+       <div class="h3 bold text-line-2">{{thisNews.title}}</div>
+       <div class="text">
+           <p>{{thisNews.description}}</p>
+           <p>{{thisNews.description}}</p>
+           <p>{{thisNews.description}}</p>
+           <p>{{thisNews.description}}</p>
+       </div>
+       <a [href]="thisNews.url" target="_blank" class="btn">Read More</a>
+    </div>
+
+</section>

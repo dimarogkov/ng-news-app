@@ -5,6 +5,6 @@
     <div class="banner__cont">
         <div class="label">{{el.auther}}</div>
         <h1 class="h1 bold color-white text-line-3">{{el.title}}</h1>
-        <a href="#" class="btn-link">Learn More <span class="material-icons">east</span></a>
+        <a routerLink="/news-detail" class="btn-link" (click)="getNewsDetail(el)">Learn More <span class="material-icons">east</span></a>
     </div>
 </section>

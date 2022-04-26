@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -8,9 +9,13 @@ import { Observable } from 'rxjs';
 
 export class NewsService {
 
+  API_URL: string = environment.apiUrl;
+  API_KEY: string = environment.apiKey;
+  newsDetail: any
+
   constructor(private http: HttpClient) {}
 
-  getNews(): Observable<any> {
-    return this.http.get<any>('https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=ce24838bbc4a41ca9fec0a57cce89466');
+  getAllNews(url: string): Observable<any> {
+    return this.http.get<any>(`${this.API_URL}/${url}&apiKey=${this.API_KEY}`);
   }
 }

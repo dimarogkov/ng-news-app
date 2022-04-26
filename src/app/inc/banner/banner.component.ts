@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { NewsService } from 'src/app/services/news.service';
 
 @Component({
   selector: 'app-banner',
@@ -9,8 +10,12 @@ export class BannerComponent implements OnInit {
 
   @Input() item: any
 
-  constructor() {}
+  constructor(private newsServices: NewsService) {}
 
   ngOnInit(): void {}
+
+  getNewsDetail(el: any) {
+    this.newsServices.newsDetail = el;
+  }
 
 }

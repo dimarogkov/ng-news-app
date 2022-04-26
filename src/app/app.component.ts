@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavigationStart, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,4 +7,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent {}
+export class AppComponent {
+
+  showTabs: boolean = false;
+
+  constructor(private router: Router) {
+    router.events.forEach(event => {
+      if(event instanceof NavigationStart) {
+        if (event['url'] === '/news-detail') {
+          this.showTabs = false;
+        } else {
+          this.showTabs = true;
+        }
+      }
+    });
+  }
+  
+}
